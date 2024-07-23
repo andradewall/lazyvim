@@ -30,7 +30,7 @@ return {
       -- stylua: ignore
       right_mouse_command = function(n) LazyVim.ui.bufremove(n) end,
       diagnostics = "nvim_lsp",
-      always_show_bufferline = false,
+      always_show_bufferline = true,
       show_buffer_close_icons = false,
       show_buffer_icons = false,
       diagnostics_indicator = function(_, _, diag)
