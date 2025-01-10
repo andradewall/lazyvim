@@ -6,6 +6,7 @@ return {
   keys = {
     { "<leader>bp", "<Cmd>BufferLineTogglePin<CR>", desc = "Toggle Pin" },
     { "<leader>bP", "<Cmd>BufferLineGroupClose ungrouped<CR>", desc = "Delete Non-Pinned Buffers" },
+    { "<leader>bo", "<Cmd>BufferLineCloseOthers<CR>", desc = "Delete Other Buffers" },
     { "<leader>br", "<Cmd>BufferLineCloseRight<CR>", desc = "Delete Buffers to the Right" },
     { "<leader>bl", "<Cmd>BufferLineCloseLeft<CR>", desc = "Delete Buffers to the Left" },
     { "<S-h>", "<cmd>BufferLineCyclePrev<cr>", desc = "Prev Buffer" },
@@ -17,17 +18,19 @@ return {
   },
   opts = {
     options = {
+      indicator = { style = "none" },
       style_preset = {
+        bufferline.style_preset.minimal,
         bufferline.style_preset.no_italic,
         bufferline.style_preset.no_bold,
-      },
-      indicator = { style = "none" },
+      }, -- stylua: ignore
+      close_command = function(n)
+        LazyVim.ui.bufremove(n)
+      end,
       -- stylua: ignore
-      close_command = function(n) Snacks.bufdelete(n) end,
-      -- stylua: ignore
-      right_mouse_command = function(n) Snacks.bufdelete(n) end,
+      right_mouse_command = function(n) LazyVim.ui.bufremove(n) end,
       diagnostics = "nvim_lsp",
-      always_show_bufferline = false,
+      always_show_bufferline = true,
       show_buffer_close_icons = false,
       show_buffer_icons = false,
       diagnostics_indicator = function(_, _, diag)
