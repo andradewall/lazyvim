@@ -66,10 +66,10 @@ return {
           {
             "diff",
           },
+          { "location" },
         },
         lualine_z = {
-          { "progress", separator = " ", padding = { left = 1, right = 0 } },
-          { "location", padding = { left = 0, right = 1 } },
+          -- { "progress", separator = " ", padding = { left = 1, right = 0 } },
         },
       },
       extensions = { "neo-tree", "lazy", "fzf" },
