@@ -6,9 +6,7 @@ return {
     ensure_installed = {
       "stylua",
       "shfmt",
-      "intelephense",
-      "phpstan",
-      "pint",
+      "phpactor",
     },
   },
 }
