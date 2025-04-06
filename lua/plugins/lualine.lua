@@ -1,3 +1,69 @@
+local custom_catppuccin = require("lualine.themes.catppuccin-mocha")
+
+custom_catppuccin.command = {
+  a = {
+    fg = custom_catppuccin.command.a.bg,
+    bg = "NONE",
+  },
+  b = { bg = "NONE" },
+  c = { bg = "NONE" },
+  x = { bg = "NONE" },
+}
+custom_catppuccin.inactive = {
+  a = {
+    fg = custom_catppuccin.inactive.a.bg,
+    bg = "NONE",
+  },
+  b = { bg = "NONE" },
+  c = { bg = "NONE" },
+  x = { bg = "NONE" },
+}
+custom_catppuccin.insert = {
+  a = {
+    fg = custom_catppuccin.insert.a.bg,
+    bg = "NONE",
+  },
+  b = { bg = "NONE" },
+  c = { bg = "NONE" },
+  x = { bg = "NONE" },
+}
+custom_catppuccin.normal = {
+  a = {
+    fg = custom_catppuccin.normal.a.bg,
+    bg = "NONE",
+  },
+  b = { bg = "NONE" },
+  c = { bg = "NONE" },
+  x = { bg = "NONE" },
+}
+custom_catppuccin.replace = {
+  a = {
+    fg = custom_catppuccin.replace.a.bg,
+    bg = "NONE",
+  },
+  b = { bg = "NONE" },
+  c = { bg = "NONE" },
+  x = { bg = "NONE" },
+}
+custom_catppuccin.terminal = {
+  a = {
+    fg = custom_catppuccin.terminal.a.bg,
+    bg = "NONE",
+  },
+  b = { bg = "NONE" },
+  c = { bg = "NONE" },
+  x = { bg = "NONE" },
+}
+custom_catppuccin.visual = {
+  a = {
+    fg = custom_catppuccin.visual.a.bg,
+    bg = "NONE",
+  },
+  b = { bg = "NONE" },
+  c = { bg = "NONE" },
+  x = { bg = "NONE" },
+}
+
 return {
   "nvim-lualine/lualine.nvim",
   event = "VeryLazy",
@@ -20,7 +86,7 @@ return {
 
     local opts = {
       options = {
-        theme = "catppuccin",
+        theme = custom_catppuccin,
         globalstatus = vim.o.laststatus == 3,
         disabled_filetypes = { statusline = { "dashboard", "alpha", "ministarter", "snacks_dashboard" } },
         section_separators = "",
