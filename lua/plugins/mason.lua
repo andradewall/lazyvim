@@ -7,6 +7,7 @@ return {
       "stylua",
       "shfmt",
       "phpactor",
+      "hyprls",
     },
   },
 }
