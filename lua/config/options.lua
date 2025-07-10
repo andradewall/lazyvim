@@ -15,3 +15,5 @@ vim.opt.smarttab = true
 -- LSP Server to use for PHP.
 -- Set to "intelephense" to use intelephense instead of phpactor.
 -- vim.g.lazyvim_php_lsp = "intelephense"
+-- Enable this option to avoid conflicts with Prettier.
+vim.g.lazyvim_prettier_needs_config = true
