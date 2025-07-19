@@ -6,11 +6,11 @@ local opt = vim.opt
 
 opt.conceallevel = 0
 
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.expandtab = true
-vim.opt.shiftwidth = 4
-vim.opt.smarttab = true
+-- vim.opt.tabstop = 4
+-- vim.opt.softtabstop = 4
+-- vim.opt.expandtab = true
+-- vim.opt.shiftwidth = 4
+-- vim.opt.smarttab = true
 
 -- LSP Server to use for PHP.
 -- Set to "intelephense" to use intelephense instead of phpactor.

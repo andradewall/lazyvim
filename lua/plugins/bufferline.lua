@@ -2,7 +2,6 @@ local bufferline = require("bufferline")
 
 return {
   "akinsho/bufferline.nvim",
-  after = "catppuccin",
   event = "VeryLazy",
   keys = {
     { "<leader>bp", "<Cmd>BufferLineTogglePin<CR>", desc = "Toggle Pin" },
