@@ -8,13 +8,12 @@ return {
       "css",
       "html",
       "javascript",
-      "typescript",
+      "javascript",
       "json",
       "php",
       "phpdoc",
       "scss",
       "php_only",
-      "blade",
       -- add more arguments for adding more treesitter parsers
     }
 
